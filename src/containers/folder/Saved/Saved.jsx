@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Create extends Component {
+class Saved extends Component {
     render() {
         return (
             <div>
-                <h1>this is your create page</h1>
+                <h1>this is your saved page</h1>
             </div>
         );
     }
 }
 
-export default Create;
+export default Saved;
