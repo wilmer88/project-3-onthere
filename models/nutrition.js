@@ -5,12 +5,12 @@ const NutritionSchema = new Schema({
   meal_name: {
     type: String,
     trim: true,
-    required: "String is Required"
+    required: "meal name is Required"
   },
 
   description: {
     type: string,
-    required: true
+    requeire: "description is Required"
   },
   
 });

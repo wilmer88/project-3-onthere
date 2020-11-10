@@ -5,18 +5,18 @@ const SignInSchema = new Schema({
   full_name: {
     type: String,
     trim: true,
-    required: "String is Required"
+    required: "full name is Required"
   },
 
 password: {
     type: String,
     trim: true,
-    required: "String is Required"
+    required: "passwor is Required"
   },
 
   email: {
     type: String,
-    match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+    required: "email is Required"
   }
 });
 

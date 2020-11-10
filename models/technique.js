@@ -5,7 +5,7 @@ const TechniqueSchema = new Schema({
   dicipline: {
     name: String,
     trim: true,
-    required: "String is Required"
+    required: "dicipline is Required"
   },
 
   name: {
