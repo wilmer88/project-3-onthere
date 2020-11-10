@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const TechniqueSchema = new Schema({
+const SavedSchema = new Schema({
   dicipline: {
     name: String,
     trim: true,
@@ -28,6 +28,6 @@ const TechniqueSchema = new Schema({
   },
 });
 
-const Technique = mongoose.model("technique", TechniqueSchema);
+const Saved = mongoose.model("saved", SavedSchema);
 
-module.exports = Technique;
+module.exports = Saved;
