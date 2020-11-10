@@ -24,7 +24,7 @@ const TechniqueSchema = new Schema({
     
   },
 
-  learnd: {
+  learned: {
     type: Boolean,
     default: false
     

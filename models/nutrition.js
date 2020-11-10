@@ -1,26 +1,20 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const SignInShema = new Schema({
-  full_name: {
+const NutritionSchema = new Schema({
+  meal_name: {
     type: String,
     trim: true,
     required: "String is Required"
   },
 
-  password: {
+  description: {
     type: string,
     required: true
   },
-
-  email: {
-    type: String,
-    required: "String is Required"
-  },
-
   
 });
 
-const SignIn = mongoose.model("signIn", SignInSchema);
+const Nutrition = mongoose.model("nutrition", NutritionSchema);
 
-module.exports = SignIn;
+module.exports = Nutrition;
