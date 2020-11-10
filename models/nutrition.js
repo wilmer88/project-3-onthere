@@ -4,13 +4,13 @@ const Schema = mongoose.Schema;
 const NutritionSchema = new Schema({
   meal_name: {
     type: String,
-    trim: true,
-    required: "meal name is Required",
+    
+    required: "meal name is Required"
   },
 
   description: {
-    type: string,
-    requeire: "description is Required",
+    type: String,
+    requeire: "description is Required"
   },
 });
 

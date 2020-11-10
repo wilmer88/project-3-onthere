@@ -88,9 +88,9 @@ app.post("/api/signin", (req, res) => {
   });
 
   app.post("/api/saved", (req, res) => {
-    res.json({
-      success: true,
-    });
+    db.Saved.create(req.body).then(newSaved => {
+        res.json(newSaved);
+    })
   });
 
   app.delete("/api/saved/:id", (req, res) => {

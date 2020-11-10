@@ -4,19 +4,19 @@ const Schema = mongoose.Schema;
 const SignInSchema = new Schema({
   full_name: {
     type: String,
-    trim: true,
-    required: "full name is Required",
+    
+    required: "full name is Required"
   },
 
   password: {
     type: String,
-    trim: true,
-    required: "passwor is Required",
+    
+    required: "passwor is Required"
   },
 
   email: {
     type: String,
-    required: "email is Required",
+    required: "email is Required"
   },
 });
 
