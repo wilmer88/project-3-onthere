@@ -28,9 +28,9 @@ connection.on("error", (err) => {
 // Begining sign in routs some not in use&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 app.get("/api/signin", (req, res) => {
- db.SignIn.find({}.then(foundlogInUser => {
+ db.SignIn.find({}).then(foundlogInUser => {
      res.json(foundlogInUser);
- }))
+ })
 });
 
 app.post("/api/signin", (req, res) => {
@@ -40,15 +40,13 @@ app.post("/api/signin", (req, res) => {
   });
 //technique routs%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   app.get("/api/technique", (req, res) => {
-    db.Technique.find({}.then(foundtechnique => {
+    db.Technique.find({}).then(foundtechnique => {
         res.json(foundtechnique);
-    }))
+    })
   });
 
   app.get("/api/technique:id", (req, res) => {
-    db.Technique.find({_id: req.params.id}.then(foundtechniqueById => {
-        res.json(foundtechniqueById);
-    }))
+  
   });
 
   app.put("/api/technique", (req, res) => {
@@ -71,9 +69,9 @@ app.post("/api/signin", (req, res) => {
 
 //saved routs5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
   app.get("/api/saved", (req, res) => {
-    db.Saved.find({}.then(foundSaved => {
+    db.Saved.find({}).then(foundSaved => {
         res.json(foundSaved);
-    }))
+    })
   });
   app.get("/api/saved:id", (req, res) => {
     db.Saved.find({_id: req.params.id}.then(foundSavedById => {
