@@ -21,8 +21,9 @@ function App() {
       <>
    {/* <userContext.Provider */}
   {/* //  value={{ token, email, setToken, setemail }} */}
-   >
+   {/* > */}
       <Navbar />
+      <Technique />
       {/* <SignIn /> */}
     {/* </userContext.Provider> */}
     </>

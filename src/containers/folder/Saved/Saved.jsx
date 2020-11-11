@@ -1,13 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Saved extends Component {
-    render() {
-        return (
-            <div>
-                <h1>this is your saved page</h1>
+const Saved = () => {
+    return (
+        <div>
+             <>
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12">
+              <h1>Please Login</h1>
+             
             </div>
-        );
-    }
-}
+          </div>
+        </div>
+      </>
+        </div>
+    );
+};
 
 export default Saved;
