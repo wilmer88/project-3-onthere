@@ -1,6 +1,7 @@
 // import React, { Component } from 'react';
 // import { link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import UserContext from "./context/userContext.js";
 // function login
 
 //form signin
@@ -10,6 +11,10 @@ const SignIn = () => {
 
   const submitedForm = (e) => {
     e.preventDefault();
+    const data = {
+      token: "boxing123",
+      email: "bill@gmail",
+    }
   };
 
   return (
