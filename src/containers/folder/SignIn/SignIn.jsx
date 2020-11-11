@@ -7,7 +7,12 @@ const SignIn = () => {
   return (
     <div>
                <>
-        <form>
+               
+               <div className="container">
+                 <div className="row">
+                   <div className="col-sm-12">
+                   <h1>Please Login</h1>
+                   <form>
   <div className="form-row"/>
     <div class="form-group col-md-6"/>
       <label for="inputEmail4">Full Name</label>
@@ -21,6 +26,10 @@ const SignIn = () => {
  
   <button type="submit" class="btn btn-primary">Sign in</button>
 </form>
+                   </div>
+                 </div>
+               </div>
+       
            </>
     </div>
   );
