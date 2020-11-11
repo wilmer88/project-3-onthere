@@ -30,7 +30,7 @@ connection.on("error", (err) => {
 });
 
 app.get("/api/config", (req, res) => {
-  req.json({
+  res.json({
     success: true,
   });
 });
