@@ -24,7 +24,15 @@ connection.on("connected", () => {
 
 connection.on("error", (err) => {
   console.log("mongoose connection error:", err);
+
 });
+
+app.get("/api/config", (req, res) => {
+  req.json({
+    success: true,
+  });
+});
+
 // Begining sign in routs some not in use&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 app.get("/api/signin", (req, res) => {
