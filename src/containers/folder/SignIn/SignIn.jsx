@@ -13,10 +13,7 @@ class SignIn extends Component {
       <input type="email" className="form-control" id="inputEmail4"/>
       <label for="inputEmail4">password</label>
       <input type="email" className="form-control" id="inputEmail4"/>
-      <label for="inputEmail4">Email</label>
-      <input type="email" className="form-control" id="inputEmail4"/>
-     
-  
+      
   
  
   <button type="submit" class="btn btn-primary">Sign in</button>

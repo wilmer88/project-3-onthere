@@ -15,12 +15,10 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/onthere", {
   useUnifiedTopology: true,
 });
 
-
 const connection = mongoose.connection;
 connection.on("connected", () => {
   console.log("your connectet susccesfully");
 });
-
 
 connection.on("error", (err) => {
   console.log("mongoose connection error:", err);
@@ -28,72 +26,76 @@ connection.on("error", (err) => {
 // Begining sign in routs some not in use&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 app.get("/api/signin", (req, res) => {
- db.SignIn.find({}).then(foundlogInUser => {
-     res.json(foundlogInUser);
- })
+  db.SignIn.find({}).then((foundlogInUser) => {
+    res.json(foundlogInUser);
+  });
 });
 
 app.post("/api/signin", (req, res) => {
-    res.json({
-      success: true,
-    });
+  db.SignIn.create(req.body).then((addedUser) => {
+    res.json(addedUser);
   });
+});
 //technique routs%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  app.get("/api/technique", (req, res) => {
-    db.Technique.find({}).then(foundtechnique => {
-        res.json(foundtechnique);
-    })
+app.get("/api/technique", (req, res) => {
+  db.Technique.find({}).then((foundtechnique) => {
+    res.json(foundtechnique);
   });
+});
 
-  app.get("/api/technique:id", (req, res) => {
-  
+app.get("/api/technique/:id", (req, res) => {
+  db.Technique.findById({ _id: req.params.id }).then((foundTechniqueById) => {
+    res.json(foundTechniqueById);
   });
+});
 
-  app.put("/api/technique", (req, res) => {
-    res.json({
-      success: true,
-    });
-  });
+app.put("/api/technique/:id", (req, res) => {
+  db.Technique.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(
+    (updatedTechnique) => {
+      res.json(updatedTechnique);
+    }
+  );
+});
 
-  app.post("/api/technique", (req, res) => {
-    res.json({
-      success: true,
-    });
+app.post("/api/technique", (req, res) => {
+  db.Technique.create(req.body).then((aTechnique) => {
+    res.json(aTechnique);
   });
+});
 
-  app.delete("/api/technique/:id", (req, res) => {
-    res.json({
-      success: true,
-    });
-  });
+app.delete("/api/technique/:id", (req, res) => {
+ db.Technique.findByIdAndDelete(req.params.id).then((results) => {
+   res.json(results)
+ })
+});
 
 //saved routs5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
-  app.get("/api/saved", (req, res) => {
-    db.Saved.find({}).then(foundSaved => {
-        res.json(foundSaved);
-    })
+app.get("/api/saved", (req, res) => {
+  db.Saved.find({}).then((foundSaved) => {
+    res.json(foundSaved);
   });
-  app.get("/api/saved:id", (req, res) => {
-    db.Saved.find({_id: req.params.id}.then(foundSavedById => {
-        res.json(foundSavedById);
-    }))
+});
+app.get("/api/saved:id", (req, res) => {
+  db.Saved.find({ _id: req.params.id }).then((foundSavedById) => {
+    res.json(foundSavedById);
   });
+});
 
-  app.put("/api/saved", (req, res) => {
-    res.json({
-      success: true,
-    });
-  });
+app.put("/api/saved/:id", (req, res) => {
+  db.Saved.findByIdAndupdate(req.params.id, req.body, { new: true }).then(
+    (updatedSaved) => {
+      res.json(updatedSaved);
+    }
+  );
+});
 
-  app.post("/api/saved", (req, res) => {
-    db.Saved.create(req.body).then(newSaved => {
-        res.json(newSaved);
-    })
+app.post("/api/saved", (req, res) => {
+  db.Saved.create(req.body).then((newSaved) => {
+    res.json(newSaved);
   });
+});
 
-  app.delete("/api/saved/:id", (req, res) => {
-   
-  });
+app.delete("/api/saved/:id", (req, res) => {});
 
 //app is listining
 app.listen(PORT, () => {
