@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+import {link} from "react-router-dom"
 
-class SignIn extends Component {
-    render() {
-        return (
-            <>
+
+
+const SignIn = () => {
+  return (
+    <div>
+               <>
         <form>
   <div className="form-row"/>
     <div class="form-group col-md-6"/>
@@ -19,7 +22,8 @@ class SignIn extends Component {
   <button type="submit" class="btn btn-primary">Sign in</button>
 </form>
            </>
-        )
-}}
+    </div>
+  );
+};
 
 export default SignIn;

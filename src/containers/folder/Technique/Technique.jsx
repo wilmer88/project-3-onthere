@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+// import React from 'react';
 
-class Technique extends Component {
-    render() {
-        return (
-            <div>
-                <h1>this is Technique</h1>
-            </div>
-        );
-    }
-}
+const Technique = () => {
+    return (
+        <div>
+            
+        </div>
+    );
+};
 
 export default Technique;
