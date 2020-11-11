@@ -1,9 +1,11 @@
+require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 const db = require("./models");
 
@@ -19,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/onthere", {
 
 const connection = mongoose.connection;
 connection.on("connected", () => {
-  console.log("your connectet susccesfully");
+  console.log("your connectet susccesfully to mongoose");
 });
 
 connection.on("error", (err) => {
