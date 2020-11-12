@@ -1,24 +1,24 @@
 // import React, { Component } from 'react';
 // import { link } from "react-router-dom";
-import userEvent from "@testing-library/user-event";
-import React, { useContext, useState } from "react";
-import UserContext from "./context/userContext.js";
+// import userEvent from "@testing-library/user-event";
+// import React, { useContext, useState } from "react";
+// import UserContext from "./context/userContext.js";
 // function login
 // const morgan = require("morgan")
 //form signin
 const SignIn = () => {
-  const [email, setemail] = useState("");
-  const [password, setpassword] = useState("");
+  // const [email, setemail] = useState("");
+  // const [password, setpassword] = useState("");
 
-  const submitedForm = (e) => {
-    e.preventDefault();
-    const data = {
-      token: "boxing123",
-      email: "bill@gmail",
-    };
-    user.seteamil(data.email),
-    user.setToken(data.token)
-  };
+  // const submitedForm = (e) => {
+  //   e.preventDefault();
+  //   const data = {
+  //     token: "boxing123",
+  //     email: "bill@gmail",
+  //   };
+  //   user.seteamil(data.email),
+  //   user.setToken(data.token)
+  // };
 
   return (
     <div>
@@ -27,7 +27,8 @@ const SignIn = () => {
           <div className="row">
             <div className="col-sm-12">
               <h1>Please Login</h1>
-              <form onSubmit ={submitedForm}>
+              <form onSubmit ="">
+              {/* <form onSubmit ={submitedForm}> */}
                 <div className="form-row" />
                 <div class="form-group col-md-6" />
 
@@ -39,11 +40,11 @@ const SignIn = () => {
                   type="email"
                   className="form-control"
                   id="inputEmail4"
-                  value={email}
+                  // value={email}
                   name="email"
-                  onChange={(e) => {
-                    setemail(e.target.value);
-                  }}
+                  // onChange={(e) => {
+                  //   setemail(e.target.value);
+                  // }}
                 />
 
                 <label for="inputEmail4">password</label>
@@ -51,11 +52,11 @@ const SignIn = () => {
                   type="password"
                   className="form-control"
                   id="inputpassword"
-                  value={password}
+                  // value={password}
                   name="password"
-                  onChange={(e) => {
-                    setpassword(e.target.value);
-                  }}
+                  // onChange={(e) => {
+                  //   setpassword(e.target.value);
+                  // }}
                 />
 
                 <button type="submit" class="btn btn-primary">

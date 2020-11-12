@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
+const path = require("path");
 
 const app = express();
 
@@ -54,7 +55,7 @@ app.post("/api/signin", (req, res) => {
   });
 });
 //technique routs%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-app.get("/api/technique", (req, res) => {
+app.get("/technique", (req, res) => {
   db.Technique.find({}).then((foundtechnique) => {
     res.json(foundtechnique);
   });
