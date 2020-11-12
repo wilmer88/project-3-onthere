@@ -1,34 +1,24 @@
-// import {useEffect, useSate} from "react";
-import{useEffect} from "react";
-// import userContext from "./context/userContext";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar.jsx";
-import Technique from "./containers/folder/Technique/Technique.jsx";
-import Search from "./containers/folder/Search/Search.jsx";
-import Saved from "./containers/folder/Saved/Saved.jsx";
-// import SignIn from "./containers/folder/SignIn/SignIn";
-// import userContext from "../../context/userContext.js"
-// import React, { useContext, seState } from "react";
-
-
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-  // const [token, setToken] = useState("");
-  // const [email, setemail] = useState("");
   return (
-    <router>
-       {/* <Switch> */}
-      <>
-   {/* <userContext.Provider */}
-  {/* //  value={{ token, email, setToken, setemail }} */}
-   {/* > */}
-      <Navbar />
-      <Technique />
-      {/* <SignIn /> */}
-    {/* </userContext.Provider> */}
-    </>
-    {/* </Switch> */}
-    </router>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
