@@ -1,5 +1,6 @@
 // import {useEffect, useSate} from "react";
-import{useEffect} from "react";
+import Axios from "axios";
+import { useEffect } from "react";
 // import userContext from "./context/userContext";
 // import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 // import Navbar from "./components/Navbar/Navbar.jsx";
@@ -10,33 +11,40 @@ import{useEffect} from "react";
 // // import userContext from "../../context/userContext.js"
 // // import React, { useContext, seState } from "react";
 
-
-
 function App() {
   // const [token, setToken] = useState("");
   // const [email, setemail] = useState("");
   return (
     useEffect(() => {
-      console.log("make an API call")
-    }, []),
-    
-    <>
-<h1>sup</h1>
-    </>
+      console.log("make an API call");
 
-  //   <router>
-  //      {/* <Switch> */}
-  //     <>
-  //  {/* <userContext.Provider */}
-  // {/* //  value={{ token, email, setToken, setemail }} */}
-  //  {/* > */}
-  //     <Navbar />
-  //     <Technique />
-  //     {/* <SignIn /> */}
-  //   {/* </userContext.Provider> */}
-  //   </>
-  //   {/* </Switch> */}
-  //   </router>
+      Axios.get("/api/config")
+        .then((gettingback) => {
+          console.log(gettingback);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }, []),
+    (
+      <>
+        <h1>sup</h1>
+      </>
+    )
+
+    //   <router>
+    //      {/* <Switch> */}
+    //     <>
+    //  {/* <userContext.Provider */}
+    // {/* //  value={{ token, email, setToken, setemail }} */}
+    //  {/* > */}
+    //     <Navbar />
+    //     <Technique />
+    //     {/* <SignIn /> */}
+    //   {/* </userContext.Provider> */}
+    //   </>
+    //   {/* </Switch> */}
+    //   </router>
   );
 }
 
