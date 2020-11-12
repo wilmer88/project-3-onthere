@@ -37,9 +37,9 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-app.get("*",(req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("*",(req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 // Begining sign in routs some not in use&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
@@ -55,7 +55,12 @@ app.post("/api/signin", (req, res) => {
   });
 });
 //technique routs%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-app.get("/technique", (req, res) => {
+
+
+app.get("/api/techniques", (req, res) => {
+  // res.json({
+  //   success: true,
+  // });
   db.Technique.find({}).then((foundtechnique) => {
     res.json(foundtechnique);
   });
