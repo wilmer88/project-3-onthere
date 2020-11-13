@@ -12,6 +12,7 @@ import SignIn from "./containers/SignIn/SignIn.jsx";
 // // import userContext from "../../context/userContext.js"
 // // import React, { useContext, seState } from "react";
 import SignUpForm from "./containers/SignUpForm";
+import Vidcard from "./containers/VidCard/VidCard"
 function App() {
 //  useEffect(() => {
 //       console.log("make an API call");
@@ -32,6 +33,7 @@ function App() {
    <Router>
   <Switch>
       {/* <Navbar /> */}
+      
       <Route exact path="/SignUpForm" component={SignUpForm}/>
       <Route exact path="/signIn" component={SignIn}/>
 <Route exact path="/technique" component={Technique}/>
