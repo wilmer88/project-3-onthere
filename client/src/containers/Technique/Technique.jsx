@@ -31,8 +31,8 @@ useEffect(() => {
   <div className="card">
   <img className="card-top" src="..." alt="Card  cap"/>
   <div className="card-body">
-    <h5 className="card-title" key={weapon._id}>h</h5>
-    {/* <p className="card-text" {...techniques.enhances[0]}>gdfg</p> */}
+    <h5 className="card-title" key={weapon._id.Technique}>ytd</h5>
+    <p className="card-text" {...weapon.enhances} {...weapon.learned} {...weapon.Technique._id} >gdfg</p>
   </div>
   <ul className="list-group list-group-flush">
     {/* <li className="list-group-item" {...techniques.diciplineName[0]}>Cras justo odio</li>
@@ -44,7 +44,7 @@ useEffect(() => {
     <Link href={"/"} className="card-Link">Another Link</Link> */}
   </div>
 </div>
-    )) : <h1>No move found</h1>};
+    )) : <h1>No move found</h1>}
         
 
     {/* <div className="card">
