@@ -1,10 +1,10 @@
 // import React, { Component } from 'react';
 // import React from 'react';
 // import VidCard from "./VidCard/VidCard"
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import axios from "axios";
 import { useEffect, useState } from 'react';
-import { response } from 'express';
+// import { response } from 'express';
 
 const Technique = () => {
     const [techniques, setTechniques] = useState([])
@@ -27,24 +27,24 @@ useEffect(() => {
         <div className="row">
           <div className="col">
 
-    {techniques.map(tech => (
+    {techniques.length ? techniques.map(weapon => (
   <div className="card">
   <img className="card-top" src="..." alt="Card  cap"/>
   <div className="card-body">
-    <h5 className="card-title" key={tech._id}></h5>
-    <p className="card-text" {... tech.enhances}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 className="card-title" key={weapon._id}>h</h5>
+    {/* <p className="card-text" {...techniques.enhances[0]}>gdfg</p> */}
   </div>
   <ul className="list-group list-group-flush">
-    <li className="list-group-item" {...tech.diciplineName}>Cras justo odio</li>
-    <li className="list-group-item" {...tech.techniqueName}>Dapibus ac facilisis in</li>
-    <li className="list-group-item" {...tech.learned}></li>
+    {/* <li className="list-group-item" {...techniques.diciplineName[0]}>Cras justo odio</li>
+    <li className="list-group-item" {...techniques.techniqueName[0]}>Dapibus ac facilisis in</li>
+    <li className="list-group-item" {...techniques.learned[0]}>rgdgaergth</li> */}
   </ul>
   <div className="card-body">
-  <Link href={"/" }className="card-Link">Card Link</Link>
-    <Link href={"/"} className="card-Link">Another Link</Link>
+  {/* <Link href={"/" }className="card-Link">Card Link</Link>
+    <Link href={"/"} className="card-Link">Another Link</Link> */}
   </div>
 </div>
-    ))}
+    )) : <h1>No move found</h1>};
         
 
     {/* <div className="card">

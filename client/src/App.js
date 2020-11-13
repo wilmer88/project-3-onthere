@@ -12,7 +12,7 @@ import SignIn from "./containers/SignIn/SignIn.jsx";
 // // import userContext from "../../context/userContext.js"
 // // import React, { useContext, seState } from "react";
 import SignUpForm from "./containers/SignUpForm";
-import Vidcard from "./containers/VidCard/VidCard";
+// import Vidcard from "./containers/VidCard/VidCard";
 function App() {
 //  useEffect(() => {
 //       console.log("make an API call");
