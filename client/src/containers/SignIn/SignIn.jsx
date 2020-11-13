@@ -59,9 +59,13 @@ const SignIn = () => {
                   // }}
                 />
 
-                <button type="submit" class="btn btn-primary">
-                  Sign in
-                </button>
+<button
+          type="submit"
+          // onClick={handleClick}
+          className="btn btn-dark btn-block mx-auto w-75"
+        >
+          Register
+        </button>
               </form>
             </div>
           </div>

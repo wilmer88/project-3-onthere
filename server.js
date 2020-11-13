@@ -57,7 +57,7 @@ app.post("/api/signin", (req, res) => {
 //technique routs%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-app.get("/api/techniques", (req, res) => {
+app.get("/api/technique", (req, res) => {
   // res.json({
   //   success: true,
   // });
