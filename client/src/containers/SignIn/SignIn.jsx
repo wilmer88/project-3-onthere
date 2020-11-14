@@ -1,10 +1,13 @@
 // import React, { Component } from 'react';
-// import { link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import userEvent from "@testing-library/user-event";
 // import React, { useContext, useState } from "react";
 // import UserContext from "./context/userContext.js";
 // function login
 // const morgan = require("morgan")
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+// import Technique from "./containers/Technique/Technique";
+
 //form signin
 const SignIn = () => {
   // const [email, setemail] = useState("");
@@ -58,14 +61,17 @@ const SignIn = () => {
                   //   setpassword(e.target.value);
                   // }}
                 />
-
+<Link to="/technique">
 <button
-          type="submit"
-          // onClick={handleClick}
+          type="button"
+         
           className="btn btn-dark btn-block mx-auto w-75"
         >
           Register
         </button>
+
+</Link>
+
               </form>
             </div>
           </div>

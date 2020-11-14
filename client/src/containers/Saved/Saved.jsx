@@ -4,8 +4,8 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import axios from 'axios'
 
 const Saved = () => {
-  const [meals, setMeals] = useState([{title:"pizza"},{title: "bagels"}]);
-  // const options = {
+  const [comida, setcomida] = useState([]);
+// const options = {
   //   method: 'GET',
   //   url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate',
   //   params: {targetCalories: '2000', timeFrame: 'day'},
@@ -16,7 +16,7 @@ const Saved = () => {
   // };
   
   // axios.request(options).then(function (response) {
-  //  setMeals(response.data.meals)
+  //  setcomida(response.data.meals)
   // //  console.log(meals)
   // }).catch(function (error) {
   //   console.error(error);
@@ -29,7 +29,8 @@ const Saved = () => {
 
 <div className="container">
         <div className="row">
-          <div className="col">
+          <div className="col-sm-3">
+            
 
 
   <div className="card">
@@ -39,7 +40,24 @@ const Saved = () => {
         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
       <ul className="list-group list-group-flush">
-      {meals.length? meals.map(food => (
+      {comida.length ? comida.map(food => (
+        <li className="list-group-item">{food.title}</li>
+      )): <li className="list-group-item"> Nothing here</li>}
+      </ul>
+    
+      <div className="card-body">
+      {/* <Link href={"/" }className="card-Link">Card Link</Link>
+        <Link href={"/"} className="card-Link">Another Link</Link> */}
+      </div>
+    </div>
+    <div className="card">
+      <img className="card-top" src="..." alt="Card cap"/>
+      <div className="card-body">
+        <h5 className="card-title">Card title</h5>
+        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+      <ul className="list-group list-group-flush">
+      {comida.length ? comida.map(food => (
         <li className="list-group-item">{food.title}</li>
       )): <li className="list-group-item"> Nothing here</li>}
       </ul>
