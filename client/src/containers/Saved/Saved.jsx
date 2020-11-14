@@ -1,28 +1,61 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import axios from 'axios'
 
 const Saved = () => {
+  const [meals, setMeals] = useState([{title:"pizza"},{title: "bagels"}]);
+  // const options = {
+  //   method: 'GET',
+  //   url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate',
+  //   params: {targetCalories: '2000', timeFrame: 'day'},
+  //   headers: {
+  //     'x-rapidapi-key': 'a218f45278mshe32a9b00f80b814p17b130jsn334b9e9c6145',
+  //     'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
+  //   }
+  // };
+  
+  // axios.request(options).then(function (response) {
+  //  setMeals(response.data.meals)
+  // //  console.log(meals)
+  // }).catch(function (error) {
+  //   console.error(error);
+  // });
+  
+
+
     return (
-<>
-<h1>heyy</h1>
-      <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap"/>
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+
+<div className="container">
+        <div className="row">
+          <div className="col">
+
+
+  <div className="card">
+      <img className="card-top" src="..." alt="Card cap"/>
+      <div className="card-body">
+        <h5 className="card-title">Card title</h5>
+        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+      <ul className="list-group list-group-flush">
+      {meals.length? meals.map(food => (
+        <li className="list-group-item">{food.title}</li>
+      )): <li className="list-group-item"> Nothing here</li>}
       </ul>
-      <div class="card-body">
-      <Link href={"/" }class="card-Link">Card Link</Link>
-        <Link href={"/"} class="card-Link">Another Link</Link>
+    
+      <div className="card-body">
+      {/* <Link href={"/" }className="card-Link">Card Link</Link>
+        <Link href={"/"} className="card-Link">Another Link</Link> */}
       </div>
     </div>
-      </>
+
+</div>
+</div>
+</div>
+
+
+     
     );
 };
 

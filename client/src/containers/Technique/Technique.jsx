@@ -31,13 +31,13 @@ useEffect(() => {
   <div className="card">
   <img className="card-top" src="..." alt="Card  cap"/>
   <div className="card-body">
-    <h5 className="card-title" key={weapon._id.Technique}>ytd</h5>
-    <p className="card-text" {...weapon.enhances} {...weapon.learned} {...weapon.Technique._id} >gdfg</p>
+    <h5 className="card-title" key={weapon._id.Technique}>porpose:{weapon.enhances}</h5>
+    {/* <p className="card-text" {...weapon.enhances} {...weapon.learned} {...weapon.Technique} >gdfg</p> */}
   </div>
   <ul className="list-group list-group-flush">
-    {/* <li className="list-group-item" {...techniques.diciplineName[0]}>Cras justo odio</li>
-    <li className="list-group-item" {...techniques.techniqueName[0]}>Dapibus ac facilisis in</li>
-    <li className="list-group-item" {...techniques.learned[0]}>rgdgaergth</li> */}
+    <li className="list-group-item">{weapon.diciplineName}</li>
+    <li className="list-group-item" {...weapon.techniqueName}>{weapon.techniqueName}</li>
+    <li className="list-group-item" >ss{weapon.learnd}</li>
   </ul>
   <div className="card-body">
   {/* <Link href={"/" }className="card-Link">Card Link</Link>
@@ -47,7 +47,7 @@ useEffect(() => {
     )) : <h1>No move found</h1>}
         
 
-    {/* <div className="card">
+    <div className="card">
       <img className="card-top" src="..." alt="Card  cap"/>
       <div className="card-body">
         <h5 className="card-title">Card title</h5>
@@ -59,13 +59,13 @@ useEffect(() => {
         <li className="list-group-item">Vestibulum at eros</li>
       </ul>
       <div className="card-body">
-      <Link href={"/" }className="card-Link">Card Link</Link>
-        <Link href={"/"} className="card-Link">Another Link</Link>
+      {/* <Link href={"/" }className="card-Link">Card Link</Link> */}
+        {/* <Link href={"/"} className="card-Link">Another Link</Link> */}
       </div>
     </div>
 
 
-    <div className="card">
+    {/* <div className="card">
       <img className="card-top" src="..." alt="Card cap"/>
       <div className="card-body">
         <h5 className="card-title">Card title</h5>
