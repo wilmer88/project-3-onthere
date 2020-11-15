@@ -10,7 +10,7 @@ const NutritionSchema = new Schema({
 
   ingridients: {
     type: String,
-    requeire: "description is Required"
+    requeire: "ingridients is Required"
   },
 
   description: {

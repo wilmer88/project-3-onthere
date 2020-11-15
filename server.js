@@ -94,7 +94,7 @@ app.delete("/api/technique/:id", (req, res) => {
 
 //saved routs5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
 app.get("/api/saved", (req, res) => {
-  db.Saved.find({}).then((foundSaved) => {
+  db.Nutrition.find({}).then((foundSaved) => {
     res.json(foundSaved);
   });
 });
@@ -113,7 +113,7 @@ app.put("/api/saved/:id", (req, res) => {
 });
 
 app.post("/api/saved", (req, res) => {
-  db.Saved.create(req.body).then((newSaved) => {
+  db.Nutrition.create(req.body).then((newSaved) => {
     res.json(newSaved);
   });
 });
