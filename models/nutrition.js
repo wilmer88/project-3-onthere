@@ -8,10 +8,21 @@ const NutritionSchema = new Schema({
     required: "meal name is Required"
   },
 
+  ingridients: {
+    type: String,
+    requeire: "description is Required"
+  },
+
   description: {
     type: String,
     requeire: "description is Required"
   },
+
+  calories: {
+    type: String,
+    requeire: "calories is Required"
+  },
+
 });
 
 const Nutrition = mongoose.model("nutrition", NutritionSchema);

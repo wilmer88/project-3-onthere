@@ -8,7 +8,7 @@ import Technique from "./containers/Technique/Technique.jsx";
 // import Search from "./containers/folder/Search/Search.jsx";
  import Saved from "./containers/Saved/Saved.jsx";
 import SignIn from "./containers/SignIn/SignIn.jsx";
-//  import { Saved } from "../../models/index.js";
+import dash from "./containers/myOnthere/dash";
 // // import userContext from "../../context/userContext.js"
 // // import React, { useContext, seState } from "react";
 import SignUpForm from "./containers/SignUpForm";
@@ -33,7 +33,7 @@ function App() {
    <Router>
   <Switch>
       {/* <Navbar /> */}
-      
+      <Route exact path="/dash" component={dash}/>
       <Route exact path="/SignUpForm" component={SignUpForm}/>
       <Route exact path="/signIn" component={SignIn}/>
 <Route exact path="/technique" component={Technique}/>
