@@ -26,18 +26,31 @@ useEffect(() => {
       <div id="not12">
       <>
       <div className="container">
+      <nav class="navbar navbar-dark bg-dark">
+      <button class="btn btn-outline-success" type="button">Nutrition</button>
+    <button class="btn btn-sm btn-outline-secondary" type="button">meals</button>
+    <button class="btn btn-sm btn-outline-secondary" type="button">saved videos</button>
+</nav>
         <div className="row">
           <div className="col-md-12">
+
+          <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"><strong> Learn, Teach, Play </strong></h1>
+    <p class="lead">by_onThere.</p>
+  </div>
+</div>
+   
 
     {techniques.length ? techniques.map(weapon => (
   <div className="card">
     <video classname="ra" width="920" height="440" controls class="show" id="video">
               <source src="" type="video/mp4"/>
             </video>
-  {/* <video className="card-top" id="size" src="/images/bath.jpg" alt="Card  cap"/> */}
+ 
   <div className="card-body">
     <h5 className="card-title" key={weapon._id.Technique}><strong>Dicipline Name:_</strong>{weapon.diciplineName}</h5>
-    {/* <p className="card-text" {...weapon.enhances} {...weapon.learned} {...weapon.Technique} >gdfg</p> */}
+    <p className="card-text" {...weapon.enhances} {...weapon.learned} {...weapon.Technique} ></p>
   </div>
   <ul className="list-group list-group-flush">
   <li className="list-group-item"><strong>Technique Name:_</strong>{weapon.techniqueName}</li>
@@ -46,8 +59,8 @@ useEffect(() => {
     <li className="list-group-item" >{weapon.learnd}</li>
   </ul>
   <div className="card-body">
-  {/* <Link href={"/" }className="card-Link">Card Link</Link>
-    <Link href={"/"} className="card-Link">Another Link</Link> */}
+ 
+  <button type="button" class="btn btn-dark">Save</button>
   </div>
 </div>
     )) : <h1>No move found</h1>}
@@ -73,8 +86,10 @@ useEffect(() => {
     </div>
 
 
-    {/* <div className="card">
-      <img className="card-top" src="..." alt="Card cap"/>
+    <div className="card">
+    <video classname="ra" width="920" height="440" controls class="show" id="video">
+              <source src="" type="video/mp4"/>
+            </video>
       <div className="card-body">
         <h5 className="card-title">Card title</h5>
         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -85,13 +100,14 @@ useEffect(() => {
         <li className="list-group-item">Vestibulum at eros</li>
       </ul>
       <div className="card-body">
-      <Link href={"/" }className="card-Link">Card Link</Link>
-        <Link href={"/"} className="card-Link">Another Link</Link>
+      {/* <Link href={"/" }className="card-Link">Card Link</Link> */}
+        {/* <Link href={"/"} className="card-Link">Another Link</Link> */}
       </div>
     </div>
 
 
-    <div className="card">
+
+    {/* <div className="card">
       <img className="card-img-top" src="..." alt="Card  cap"/>
       <div className="card-body">
         <h5 className="card-title">Card title</h5>
@@ -125,7 +141,7 @@ useEffect(() => {
         <Link href={"/"} className="card-Link">Another Link</Link>
       </div>
     </div> */}
-              
+               
            
               
               

@@ -3,7 +3,7 @@
 // import { useEffect } from "react";
 // import userContext from "./context/userContext";
  import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-// import Navbar from "./components/Navbar/Navbar.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
 import Technique from "./containers/Technique/Technique.jsx";
 // import Search from "./containers/folder/Search/Search.jsx";
  import Saved from "./containers/Saved/Saved.jsx";
