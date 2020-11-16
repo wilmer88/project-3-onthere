@@ -2,6 +2,7 @@
 // import React from 'react';
 // import VidCard from "./VidCard/VidCard"
 // import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from 'react';
 // import { response } from 'express';
@@ -27,9 +28,12 @@ useEffect(() => {
       <>
       <div className="container">
       <nav class="navbar navbar-dark bg-dark">
+      <Link to="/saved">
       <button class="btn btn-outline-success" type="button">Nutrition</button>
-    <button class="btn btn-sm btn-outline-secondary" type="button">meals</button>
+      </Link>
+      <Link to="/dash">
     <button class="btn btn-sm btn-outline-secondary" type="button">saved videos</button>
+    </Link>
 </nav>
         <div className="row">
           <div className="col-md-12">

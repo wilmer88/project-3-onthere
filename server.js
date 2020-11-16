@@ -99,13 +99,13 @@ app.get("/api/saved", (req, res) => {
   });
 });
 app.get("/api/saved:id", (req, res) => {
-  db.Saved.find({ _id: req.params.id }).then((foundSavedById) => {
+  db.Nutrition.find({ _id: req.params.id }).then((foundSavedById) => {
     res.json(foundSavedById);
   });
 });
 
 app.put("/api/saved/:id", (req, res) => {
-  db.Saved.findByIdAndupdate(req.params.id, req.body, { new: true }).then(
+  db.Nutrition.findByIdAndupdate(req.params.id, req.body, { new: true }).then(
     (updatedSaved) => {
       res.json(updatedSaved);
     }
@@ -118,7 +118,11 @@ app.post("/api/saved", (req, res) => {
   });
 });
 
-app.delete("/api/saved/:id", (req, res) => {});
+app.delete("/api/saved/:id", (req, res) => {
+  db.Nutrition.findByIdAndDelete(req.params.id).then((results) => {
+    res.json(results)
+  })
+});
 
 //app is listining
 app.listen(PORT, () => {

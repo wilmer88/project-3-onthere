@@ -12,7 +12,10 @@ import dash from "./containers/myOnthere/dash";
 // // import userContext from "../../context/userContext.js"
 // // import React, { useContext, seState } from "react";
 import SignUpForm from "./containers/SignUpForm";
-// import Vidcard from "./containers/VidCard/VidCard";
+import EditComida from "./containers/EditComida/EditComida";
+import MakeMeal from "./containers/MakeMeal/MakeMeal";
+import Comida from "./containers/Comida/Comida";
+import AllMeals from "./containers/AllMeals/AllMeals";
 function App() {
 //  useEffect(() => {
 //       console.log("make an API call");
@@ -26,19 +29,29 @@ function App() {
 //         });
 //     }, []),
 
-  // const [token, setToken] = useState("");
-  // const [email, setemail] = useState("");
+  
+  
+  
+  
+  
   return (
-
-   <Router>
+  <Router>
   <Switch>
       {/* <Navbar /> */}
-      <Route exact path="/dash" component={dash}/>
+      <Route exact path="/" component={SignIn}/>
       <Route exact path="/SignUpForm" component={SignUpForm}/>
       <Route exact path="/signIn" component={SignIn}/>
-<Route exact path="/technique" component={Technique}/>
-<Route exact path="/saved" component={Saved}/>
-<Route exact path="/" component={SignIn}/>
+     <Route exact path="/technique" component={Technique}/>
+     <Route exact path="/dash" component={dash}/>
+     {/* <Route exact path="/last" component={Saved}/> */}
+     <Route exact path="/saved/make" component={MakeMeal}/>
+     <Route exact path="/saved/:id/edit" component={EditComida}/>
+     <Route exact path="/saved/saved:id" component={Comida}/>
+    <Route exact path="/saved" component={AllMeals}/>
+     
+  
+
+
       {/* <Route exact path="/edit" component={EditTechnique}/> */}
       </Switch>
    </Router>

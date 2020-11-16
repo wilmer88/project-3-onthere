@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 import "./dash.css"
 const dash = () => {
@@ -9,9 +10,12 @@ const dash = () => {
              
             <div className="container">
              <nav class="navbar navbar-dark bg-dark">
-      <button class="btn btn-outline-success" type="button">Nutrition</button>
-    <button class="btn btn-sm btn-outline-secondary" type="button">meals</button>
-    <button class="btn btn-sm btn-outline-secondary" type="button">saved videos</button>
+             <Link to="/technique">
+      <button class="btn btn-outline-success" type="button">Technique</button>
+      </Link>
+      <Link to="/saved">
+    <button class="btn btn-sm btn-outline-secondary" type="button">Nutrition</button>
+    </Link>
     </nav>
     <div class="jumbotron jumbotron-fluid">
   <div class="container">

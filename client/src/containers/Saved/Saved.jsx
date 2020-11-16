@@ -5,22 +5,22 @@ import axios from 'axios'
 import { IconName } from "react-icons/io";
 const Saved = () => {
   const [comida, setcomida] = useState([]);
-const options = {
-    method: 'GET',
-    url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate',
-    params: {targetCalories: '2000', timeFrame: 'day'},
-    headers: {
-      'x-rapidapi-key': 'a218f45278mshe32a9b00f80b814p17b130jsn334b9e9c6145',
-      'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
-    }
-  };
+// const options = {
+//     method: 'GET',
+//     url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate',
+//     params: {targetCalories: '2000', timeFrame: 'day'},
+//     headers: {
+//       'x-rapidapi-key': 'a218f45278mshe32a9b00f80b814p17b130jsn334b9e9c6145',
+//       'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
+//     }
+//   };
   
-  axios.request(options).then(function (response) {
-   setcomida(response.data.meals)
-  //  console.log(meals)
-  }).catch(function (error) {
-    console.error(error);
-  });
+//   axios.request(options).then(function (response) {
+//    setcomida(response.data.meals)
+//   //  console.log(meals)
+//   }).catch(function (error) {
+//     console.error(error);
+//   });
   
 
 

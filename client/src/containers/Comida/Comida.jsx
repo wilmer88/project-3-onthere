@@ -14,8 +14,12 @@ const Comida = () => {
     return (
         <div>
             <>
-         
-
+            <div className="container">
+            <nav class="navbar navbar-dark bg-dark">
+      <button class="btn btn-outline-success" type="button">Nutrition</button>
+    <button class="btn btn-sm btn-outline-secondary" type="button">meals</button>
+    <button class="btn btn-sm btn-outline-secondary" type="button">saved videos</button>
+    </nav>
 
 
             <table class="table table-hover">
@@ -47,6 +51,7 @@ const Comida = () => {
     </tr>
   </tbody>
 </table>
+</div>
             
             </>
             
