@@ -28,7 +28,7 @@ useEffect(() => {
       <>
       <div className="container">
       <nav class="navbar navbar-dark bg-dark">
-      <Link to="/all">
+      <Link to="/last">
       <button class="btn btn-outline-success" type="button">Nutrition</button>
       </Link>
       <Link to="/dash">
@@ -40,7 +40,7 @@ useEffect(() => {
 
           <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4"><strong> Learn, Teach, Play </strong></h1>
+    <h1 class="display-4"><strong> Learn, Teach, GO! </strong></h1>
     <p class="lead">by_onThere.</p>
   </div>
 </div>
