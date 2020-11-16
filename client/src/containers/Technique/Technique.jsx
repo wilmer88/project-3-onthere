@@ -28,7 +28,7 @@ useEffect(() => {
       <>
       <div className="container">
       <nav class="navbar navbar-dark bg-dark">
-      <Link to="/saved">
+      <Link to="/all">
       <button class="btn btn-outline-success" type="button">Nutrition</button>
       </Link>
       <Link to="/dash">
@@ -54,7 +54,7 @@ useEffect(() => {
  
   <div className="card-body">
     <h5 className="card-title" key={weapon._id.Technique}><strong>Dicipline Name:_</strong>{weapon.diciplineName}</h5>
-    <p className="card-text" {...weapon.enhances} {...weapon.learned} {...weapon.Technique} ></p>
+    <p className="card-text"></p>
   </div>
   <ul className="list-group list-group-flush">
   <li className="list-group-item"><strong>Technique Name:_</strong>{weapon.techniqueName}</li>
@@ -75,13 +75,13 @@ useEffect(() => {
               <source src="" type="video/mp4"/>
             </video>
       <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 className="card-title"><strong>Dicipline Name:_</strong>Freestyle</h5>
+        <p className="card-text"></p>
       </div>
       <ul className="list-group list-group-flush">
-        <li className="list-group-item">Cras justo odio</li>
-        <li className="list-group-item">Dapibus ac facilisis in</li>
-        <li className="list-group-item">Vestibulum at eros</li>
+        <li className="list-group-item"><strong>Tecqnique Name:_</strong>Overhnd Right</li>
+        <li className="list-group-item"><strong>Advantages:_</strong>generating power</li>
+        <li className="list-group-item"><strong>Learnd:_</strong>False</li>
       </ul>
       <div className="card-body">
       {/* <Link href={"/" }className="card-Link">Card Link</Link> */}
@@ -95,19 +95,60 @@ useEffect(() => {
               <source src="" type="video/mp4"/>
             </video>
       <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <h5 className="card-title"><strong>Dicipline Name:_</strong>Counter Fighting</h5>
+        <p className="card-text"></p>
       </div>
       <ul className="list-group list-group-flush">
-        <li className="list-group-item">Cras justo odio</li>
-        <li className="list-group-item">Dapibus ac facilisis in</li>
-        <li className="list-group-item">Vestibulum at eros</li>
+        <li className="list-group-item"><strong>Tecqnique Name:_</strong>Right Cross</li>
+        <li className="list-group-item"><strong>Advantages:_</strong>Counter</li>
+        <li className="list-group-item"><strong>Learnd:_</strong>False</li>
       </ul>
       <div className="card-body">
       {/* <Link href={"/" }className="card-Link">Card Link</Link> */}
         {/* <Link href={"/"} className="card-Link">Another Link</Link> */}
       </div>
     </div>
+
+    <div className="card">
+    <video classname="ra" width="920" height="440" controls class="show" id="video">
+              <source src="" type="video/mp4"/>
+            </video>
+      <div className="card-body">
+        <h5 className="card-title"><strong>Dicipline Name:_</strong>Boxing</h5>
+        <p className="card-text"></p>
+      </div>
+      <ul className="list-group list-group-flush">
+        <li className="list-group-item"><strong>Tecqnique Name:_</strong>Rare Hook</li>
+        <li className="list-group-item"><strong>Advantages:_</strong>Higher connect percentage</li>
+        <li className="list-group-item"><strong>Learnd:_</strong>False</li>
+      </ul>
+      <div className="card-body">
+      {/* <Link href={"/" }className="card-Link">Card Link</Link> */}
+        {/* <Link href={"/"} className="card-Link">Another Link</Link> */}
+      </div>
+    </div>
+
+    <div className="card">
+    <video classname="ra" width="920" height="440" controls class="show" id="video">
+              <source src="" type="video/mp4"/>
+            </video>
+      <div className="card-body">
+        <h5 className="card-title"><strong>Dicipline Name:_</strong>Yoga</h5>
+        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+      <ul className="list-group list-group-flush">
+        <li className="list-group-item"><strong>Tecqnique Name:_</strong>Camol pose</li>
+        <li className="list-group-item"><strong>benifits:_</strong>knees, flexability</li>
+        <li className="list-group-item"><strong>Learnd:_</strong>False</li>
+      </ul>
+      <div className="card-body">
+      {/* <Link href={"/" }className="card-Link">Card Link</Link> */}
+        {/* <Link href={"/"} className="card-Link">Another Link</Link> */}
+      </div>
+    </div>
+
+
+
 
 
 

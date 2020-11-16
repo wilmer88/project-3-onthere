@@ -13,7 +13,7 @@ const dash = () => {
              <Link to="/technique">
       <button class="btn btn-outline-success" type="button">Technique</button>
       </Link>
-      <Link to="/saved">
+      <Link to="/last">
     <button class="btn btn-sm btn-outline-secondary" type="button">Nutrition</button>
     </Link>
     </nav>

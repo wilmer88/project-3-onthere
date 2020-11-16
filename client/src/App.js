@@ -3,7 +3,7 @@
 // import { useEffect } from "react";
 // import userContext from "./context/userContext";
  import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar.jsx";
+// import Navbar from "./components/Navbar/Navbar.jsx";
 import Technique from "./containers/Technique/Technique.jsx";
 // import Search from "./containers/folder/Search/Search.jsx";
  import Saved from "./containers/Saved/Saved.jsx";
@@ -11,7 +11,7 @@ import SignIn from "./containers/SignIn/SignIn.jsx";
 import dash from "./containers/myOnthere/dash";
 // // import userContext from "../../context/userContext.js"
 // // import React, { useContext, seState } from "react";
-import SignUpForm from "./containers/SignUpForm";
+import SignUp from "./containers/SignUp/SignUp";
 import EditComida from "./containers/EditComida/EditComida";
 import MakeMeal from "./containers/MakeMeal/MakeMeal";
 import Comida from "./containers/Comida/Comida";
@@ -38,16 +38,16 @@ function App() {
   <Router>
   <Switch>
       {/* <Navbar /> */}
-      <Route exact path="/" component={SignIn}/>
-      <Route exact path="/SignUpForm" component={SignUpForm}/>
+      {/* <Route exact path="/" component={SignIn}/> */}
+      <Route exact path="/" component={SignUp}/>
       <Route exact path="/signIn" component={SignIn}/>
      <Route exact path="/technique" component={Technique}/>
      <Route exact path="/dash" component={dash}/>
-     {/* <Route exact path="/last" component={Saved}/> */}
-     <Route exact path="/saved/make" component={MakeMeal}/>
-     <Route exact path="/saved/:id/edit" component={EditComida}/>
-     <Route exact path="/saved/saved:id" component={Comida}/>
-    <Route exact path="/saved" component={AllMeals}/>
+     <Route exact path="/last" component={Saved}/>
+     <Route exact path="/make" component={MakeMeal}/>
+     <Route exact path="/edit" component={EditComida}/>
+     <Route exact path="/saved:id" component={Comida}/>
+    <Route exact path="/all" component={AllMeals}/>
      
   
 

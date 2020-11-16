@@ -2,29 +2,25 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const SavedSchema = new Schema({
-  diciplineName: {
+  meal_name: {
     type: String,
-
-    required: "dicipline is Required",
+    
+    required: "meal name is Required"
   },
 
-  techniqueName: {
+  ingridients: {
     type: String,
-
-    required: "Name is Required",
+    requeire: "ingridients is Required"
   },
 
-  difficulty: {
+  description: {
     type: String,
+    requeire: "description is Required"
   },
 
-  enhances: {
+  calories: {
     type: String,
-  },
-
-  learned: {
-    type: Boolean,
-    default: false,
+    requeire: "calories is Required"
   },
 });
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import API from "../utils/API";
 
 function SignUpForm() {
@@ -60,6 +61,7 @@ function SignUpForm() {
         />
       </div>
       <div className="text-center">
+        <Link to="/signin">
         <button
           type="submit"
           onClick={handleClick}
@@ -67,6 +69,7 @@ function SignUpForm() {
         >
           Register
         </button>
+        </Link>
       </div>
     </form>
   );

@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import axios from 'axios'
 import { IconName } from "react-icons/io";
+import "./Saved.css"
 const Saved = () => {
   const [comida, setcomida] = useState([]);
 // const options = {
@@ -25,18 +26,26 @@ const Saved = () => {
 
 
     return (
-
-
+<div>
+<>
 <div className="container">
+<nav class="navbar navbar-dark bg-dark">
+      <Link to="/technique">
+      <button class="btn btn-outline-success" type="button">Technique</button>
+      </Link>
+      <Link to="/all">
+    <button class="btn btn-sm btn-outline-secondary" type="button">nutrition</button>
+    </Link>
+</nav>
         <div className="row">
-          <div className="col-sm-3">
+          <div className="col-sm-3"></div>
             
-
-
+          <div className="col-sm-6">
+          <div className="row">
   <div className="card">
-      <img className="card-top" src="..." alt="Card cap"/>
+      <img className="card-top" src="" alt="Card cap"/>
       <div className="card-body">
-        <h5 className="card-title">Card title</h5>
+        <h5 className="card-title">Steam fish</h5>
         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
       <ul className="list-group list-group-flush">
@@ -51,9 +60,9 @@ const Saved = () => {
       </div>
     </div>
     <div className="card">
-      <img className="card-top" src="..." alt="Card cap"/>
+      <img className="card-top" src="" alt="Card cap"/>
       <div className="card-body">
-        <h5 className="card-title">Card title</h5>
+        <h5 className="card-title">steam</h5>
         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
       <ul className="list-group list-group-flush">
@@ -67,12 +76,12 @@ const Saved = () => {
         <Link href={"/"} className="card-Link">Another Link</Link> */}
       </div>
     </div>
-
+  </div>  
 </div>
 </div>
 </div>
-
-
+</>
+</div>
      
     );
 };

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 
 const AllMeals = () => {
-const [comida, setComida] = useState([])
+const [comida, setComida] = useState([]);
 
 
     useEffect(() => {
@@ -27,22 +27,10 @@ const [comida, setComida] = useState([])
             <Link to="/technique">
       <button type="button" class="btn btn-outline-success">Techniques</button>
       </Link>
-      <Link to="/">
+      <Link to="/last">
  <button class="btn btn-sm btn-outline-secondary" type="button">dash</button>
  </Link>
     </nav>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  <div className="row">
      <div className="col-sm-12 text-right">
     
@@ -73,7 +61,9 @@ const [comida, setComida] = useState([])
   </td>
 
   <td>
+  <Link to="/saved/make">
       <button className="btn btn-secondary">Add New</button>
+      </Link>
   </td>
 
   <td>
