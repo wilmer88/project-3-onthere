@@ -1,12 +1,9 @@
 #project3 onThere
+Is Skelton site for boxing fans where students and teacher share knowledge connecting them thru youtube API.
+The idea is fan can visit learn from the best instructional vid from the best coaches all together free from the youtube site. also tried using Rapid Api to implement on Nutritional page for weight cutting.
+Major bugs are api headers need to be wraped in a function to limit to one object. YouTube api was unsuccessfull.
 
-
-Is Skelton site for boxing fans where students and teacher share knowledge connecting them thrue youtube tech.
-The idea is fan can visit learn from the best instructional vid from the best coaches all together free from the youtube site without needing to
-a single name learn the rightway.
-Major bugs are api headers need to be wraped in a function to limit to one objcet along with youtube api.
-
-  Tech used for this project 
+  ##Technologys used for this project 
  react js
  node js
  bootstrap
@@ -14,7 +11,7 @@ Major bugs are api headers need to be wraped in a function to limit to one objce
  Mongod
  bycrypt
 
-When directed to the home/rootpage user is  presented with  all the members of Onthere.  The members will be stacked on top of each other like a news feed. Then the user can browse all profile cards and is able to answer questions and interact on other members' profiles .
+When directed to the home/rootpage user is  presented with  all the members of Onthere.  The members will be stacked on top of each other like a news feed. Then the user can browse all profile cards and is able to answer questions and interact with members' profiles .
 
 When the user is on the home page. The user will have and see navbar with two options to create a profile or to search for a profile.
 
