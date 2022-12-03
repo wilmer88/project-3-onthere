@@ -1,71 +1,46 @@
 {
-  "name": "public",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.1",
-    "@testing-library/user-event": "^12.2.0",
-    "axios": "^0.21.0",
-    "bcrypt": "^5.0.0",
-    "bootstrap": "^4.5.3",
-    "concurrently": "^7.1.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "if-env": "^1.0.4",
-    "mongoose": "^5.10.13",
-    "paths": "^0.1.1",
-    "unirest": "^0.6.0"
-
-  },
+  "name": "project3",
+  "version": "1.0.0",
+  "main": "server.js",
   "scripts": {
-    "test": "echo\"error: no test specified\" && exit 1",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
-    "heroku-postbuild": "npm run install-client && npm run build",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "engines": {
-    "npm": "8.19.2",
-    "node": "v16.14.2"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "server.js",
-  "devDependencies": {
-    "concurrently": "^5.3.0",
-    "nodemon": "^2.0.6"
+    "heroku-postbuild": "npm run install-client && npm run build"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wilmer88/project-3-onthere.git"
+    "type": "git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wilmer88/project-3-onthere/issues"
+    "url": "git+https://github.com/wilmer88/project-3-onthere.git"
   },
-  "homepage": "https://github.com/wilmer88/project-3-onthere#readme"
+  "homepage": "https://github.com/wilmer88/project-3-onthere#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "chai-http": "^4.3.0",
+    "concurrently": "^7.1.0",
+    "core-js": "^3.25.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.3",
+    "formidable": "^3.2.4",
+    "if-env": "^1.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.10",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "nyc": "^15.1.0",
+    "path": "^0.12.7",
+    "proxy-sinon-chai": "^0.0.1",
+    "sinon": "^13.0.2",
+    "stripe": "^10.15.0",
+    "superagent": "^8.0.0",
+    "uuid": "^9.0.0"
+  }
 }
