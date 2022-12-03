@@ -51,6 +51,10 @@
       "last 1 safari version"
     ]
   },
+  "engines" : { 
+    "npm" : "8.19.2",
+    "node" : "v16.14.2"
+  },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "server.js",
   "devDependencies": {
