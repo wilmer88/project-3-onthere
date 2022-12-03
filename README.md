@@ -4,6 +4,8 @@ The idea is fan can visit learn from the best instructional vid from the best co
 Major bugs are api headers need to be wraped in a function to limit to one object. YouTube api was unsuccessfull.
 
   ##Technologys used for this project 
+  
+linux
  react js
  node js
  bootstrap
