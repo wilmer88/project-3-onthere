@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 // import UserContext from "./context/userContext.js";
 // function login
 // const morgan = require("morgan")
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 // import Technique from "./containers/Technique/Technique";
 
 //form signin

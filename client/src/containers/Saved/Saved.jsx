@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import axios from 'axios'
-import { IconName } from "react-icons/io";
 import "./Saved.css"
 const Saved = () => {
   const [comida, setcomida] = useState([]);
