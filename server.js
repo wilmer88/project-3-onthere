@@ -14,9 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("client/build"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/onthere", {
-
-});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/onthere");
 
 const connection = mongoose.connection;
 connection.on("connected", () => {
