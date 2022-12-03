@@ -14,7 +14,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("client/build"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/onthere");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/onthere",
+{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  
+}).then(() => console.log("MongoDB has been connected"))
+.catch((err) => console.log(err));
 
 const connection = mongoose.connection;
 connection.on("connected", () => {
@@ -24,6 +30,14 @@ connection.on("connected", () => {
 connection.on("error", (err) => {
   console.log("mongoose connection error:", err);
 
+});
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+app.get("*", function (request, response) {
+response.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
 });
 
 app.get("/api/config", (req, res) => {
