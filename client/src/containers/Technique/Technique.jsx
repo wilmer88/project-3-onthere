@@ -3,8 +3,8 @@
 // import VidCard from "./VidCard/VidCard"
 // import {Link} from 'react-router-dom';
 import { Link } from "react-router-dom";
-import axios from "axios";
-import { useEffect, useState } from 'react';
+// import axios from "axios";
+import {  useState } from 'react';
 // import { response } from 'express';
 import "./Technique.css"
 const Technique = () => {
@@ -13,12 +13,12 @@ const Technique = () => {
 
 // ]);
 
-useEffect(() => {
-    axios.get("/api/technique").then((response) => {
-        console.log(response.data);
-        setTechniques(response.data);
-    });
-}, []);
+// useEffect(() => {
+//     axios.get("/api/technique").then((response) => {
+//         console.log(response.data);
+//         setTechniques(response.data);
+//     });
+// }, []);
 
 
 
@@ -27,28 +27,28 @@ useEffect(() => {
       <div id="not12">
       <>
       <div className="container">
-      <nav class="navbar navbar-dark bg-dark">
+      <nav className="navbar navbar-dark bg-dark">
       <Link to="/last">
-      <button class="btn btn-outline-success" type="button">Nutrition</button>
+      <button className="btn btn-outline-success" type="button">Nutrition</button>
       </Link>
       <Link to="/dash">
-    <button class="btn btn-sm btn-outline-secondary" type="button">saved videos</button>
+    <button className="btn btn-sm btn-outline-secondary" type="button">saved videos</button>
     </Link>
 </nav>
         <div className="row">
           <div className="col-md-12">
 
-          <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4"><strong> Learn, Teach, GO! </strong></h1>
-    <p class="lead">by_onThere.</p>
+          <div className="jumbotron jumbotron-fluid">
+  <div className="container">
+    <h1 className="display-4"><strong> Learn, Teach, GO! </strong></h1>
+    <p className="lead">by_onThere.</p>
   </div>
 </div>
    
 
     {techniques.length ? techniques.map(weapon => (
   <div className="card">
-    <video classname="ra" width="920" height="440" controls class="show" id="video">
+    <video classname="ra" width="920" height="440"  id="video">
               <source src="" type="video/mp4"/>
             </video>
  
@@ -64,14 +64,14 @@ useEffect(() => {
   </ul>
   <div className="card-body">
  
-  <button type="button" class="btn btn-dark">Save</button>
+  <button type="button" className="btn btn-dark">Save</button>
   </div>
 </div>
     )) : <h1>No move found</h1>}
         
 
     <div className="card">
-    <video classname="ra" width="920" height="440" controls class="show" id="video">
+    <video className="ra" width="920" height="440" controls id="video">
               <source src="" type="video/mp4"/>
             </video>
       <div className="card-body">
@@ -91,7 +91,7 @@ useEffect(() => {
 
 
     <div className="card">
-    <video classname="ra" width="920" height="440" controls class="show" id="video">
+    <video className="ra" width="920" height="440" controls id="video">
               <source src="" type="video/mp4"/>
             </video>
       <div className="card-body">
@@ -110,7 +110,7 @@ useEffect(() => {
     </div>
 
     <div className="card">
-    <video classname="ra" width="920" height="440" controls class="show" id="video">
+    <video className="ra" width="920" height="440" controls id="video">
               <source src="" type="video/mp4"/>
             </video>
       <div className="card-body">
@@ -129,7 +129,7 @@ useEffect(() => {
     </div>
 
     <div className="card">
-    <video classname="ra" width="920" height="440" controls class="show" id="video">
+    <video className="ra" width="920" height="440" controls id="video">
               <source src="" type="video/mp4"/>
             </video>
       <div className="card-body">
@@ -146,12 +146,6 @@ useEffect(() => {
         {/* <Link href={"/"} className="card-Link">Another Link</Link> */}
       </div>
     </div>
-
-
-
-
-
-
     {/* <div className="card">
       <img className="card-img-top" src="..." alt="Card  cap"/>
       <div className="card-body">
@@ -186,22 +180,7 @@ useEffect(() => {
         <Link href={"/"} className="card-Link">Another Link</Link>
       </div>
     </div> */}
-               
-           
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-                </div>
+             </div>
             </div>
         </div>
         </>

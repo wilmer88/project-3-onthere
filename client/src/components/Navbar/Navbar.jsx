@@ -8,7 +8,7 @@ function Navbar() {
   return(
     
     <nav className="navbar">
-      <Link to="#" className="menu-bars">
+      <Link to="/last" className="menu-bars">
     <FaIcons.FaBars/>
     
       </Link>

@@ -15,14 +15,14 @@ const Comida = () => {
         <div>
             <>
             <div className="container">
-            <nav class="navbar navbar-dark bg-dark">
-      <button class="btn btn-outline-success" type="button">Nutrition</button>
-    <button class="btn btn-sm btn-outline-secondary" type="button">meals</button>
-    <button class="btn btn-sm btn-outline-secondary" type="button">saved videos</button>
+            <nav className="navbar navbar-dark bg-dark">
+      <button className="btn btn-outline-success" type="button">Nutrition</button>
+    <button className="btn btn-sm btn-outline-secondary" type="button">meals</button>
+    <button className="btn btn-sm btn-outline-secondary" type="button">saved videos</button>
     </nav>
 
 
-            <table class="table table-hover">
+            <table className="table table-hover">
   <thead>
     <tr>
       <th scope="col">#</th>

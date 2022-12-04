@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
-import axios from 'axios'
+// import axios from 'axios'
 import "./Saved.css"
 const Saved = () => {
-  const [comida, setcomida] = useState([]);
-const options = {
-    method: 'GET',
-    url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate',
-    params: {targetCalories: '2000', timeFrame: 'day'},
-    headers: {
-      'x-rapidapi-key': 'a218f45278mshe32a9b00f80b814p17b130jsn334b9e9c6145',
-      'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
-    }
-  };
+  const [comida] = useState([]);
+// const options = {
+//     method: 'GET',
+//     url: 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate',
+//     params: {targetCalories: '2000', timeFrame: 'day'},
+//     headers: {
+//       'x-rapidapi-key': 'a218f45278mshe32a9b00f80b814p17b130jsn334b9e9c6145',
+//       'x-rapidapi-host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
+//     }
+//   };
   
-  axios.request(options).then(function (response) {
-   setcomida(response.data.meals)
-  //  console.log(meals)
-  }).catch(function (error) {
-    console.error(error);
-  });
+  // axios.request(options).then(function (response) {
+  //  setcomida(response.data.meals)
+  // //  console.log(meals)
+  // }).catch(function (error) {
+  //   console.error(error);
+  // });
   
 
 
@@ -27,12 +27,12 @@ const options = {
 <div>
 <>
 <div className="container">
-<nav class="navbar navbar-dark bg-dark">
+<nav className="navbar navbar-dark bg-dark">
       <Link to="/technique">
-      <button class="btn btn-outline-success" type="button">Technique</button>
+      <button className="btn btn-outline-success" type="button">Technique</button>
       </Link>
       <Link to="/all">
-    <button class="btn btn-sm btn-outline-secondary" type="button">nutrition</button>
+    <button className="btn btn-sm btn-outline-secondary" type="button">nutrition</button>
     </Link>
 </nav>
         <div className="row">

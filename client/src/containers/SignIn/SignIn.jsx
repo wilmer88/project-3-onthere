@@ -29,19 +29,19 @@ const SignIn = () => {
           <div className="row">
             <div className="col-sm-12">
               <h1>Please Login</h1>
-              <form onSubmit ="">
+              {/* <form onSubmit =""> */}
               {/* <form onSubmit ={submitedForm}> */}
                 <div className="form-row" />
-                <div class="form-group col-md-6" />
+                <div className="form-group col-md-6" />
 
-                <label for="inputEmail4">Full Name</label>
+                <label >Full Name</label>
                 <input type="email" className="form-control" id="inputEmail4" />
 
-                <label for="inputEmail4">Email</label>
+                <label>Email</label>
                 <input
                   type="email"
                   className="form-control"
-                  id="inputEmail4"
+                  // id="inputEmail4"
                   // value={email}
                   name="email"
                   // onChange={(e) => {
@@ -49,11 +49,11 @@ const SignIn = () => {
                   // }}
                 />
 
-                <label for="inputEmail4">password</label>
+                <label >password</label>
                 <input
                   type="password"
                   className="form-control"
-                  id="inputpassword"
+                  // id="inputpassword"
                   // value={password}
                   name="password"
                   // onChange={(e) => {
@@ -71,7 +71,7 @@ const SignIn = () => {
 
 </Link>
 
-              </form>
+              {/* </form> */}
             </div>
           </div>
         </div>

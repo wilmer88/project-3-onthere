@@ -2,8 +2,8 @@
 // import Axios from "axios";
 // import { useEffect } from "react";
 // import userContext from "./context/userContext";
- import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-// import Navbar from "./components/Navbar/Navbar.jsx";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import Navbar from "./components/Navbar/Navbar.jsx";import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Technique from "./containers/Technique/Technique.jsx";
 // import Search from "./containers/folder/Search/Search.jsx";
  import Saved from "./containers/Saved/Saved.jsx";
@@ -13,7 +13,7 @@ import dash from "./containers/myOnthere/dash";
 // // import React, { useContext, seState } from "react";
 import SignUp from "./containers/SignUp/SignUp";
 import EditComida from "./containers/EditComida/EditComida";
-import MakeMeal from "./containers/MakeMeal/MakeMeal";
+// import MakeMeal from "./containers/MakeMeal/MakeMeal";
 import Comida from "./containers/Comida/Comida";
 import AllMeals from "./containers/AllMeals/AllMeals";
 function App() {
@@ -36,24 +36,24 @@ function App() {
   
   return (
   <Router>
-  <Switch>
+  <Routes>
       {/* <Navbar /> */}
       {/* <Route exact path="/" component={SignIn}/> */}
-      <Route exact path="/" component={SignUp}/>
-      <Route exact path="/signIn" component={SignIn}/>
-     <Route exact path="/technique" component={Technique}/>
-     <Route exact path="/dash" component={dash}/>
-     <Route exact path="/last" component={Saved}/>
-     <Route exact path="/make" component={MakeMeal}/>
-     <Route exact path="/edit" component={EditComida}/>
-     <Route exact path="/saved:id" component={Comida}/>
-    <Route exact path="/all" component={AllMeals}/>
+      <Route exact path="/" element={<SignUp/>}/>
+      <Route exact path="/signIn" element={<SignIn/>}/>
+     <Route exact path="/technique" element={<Technique/>}/>
+     <Route exact path="/dash" element={dash}/>
+     <Route exact path="/last" element={<Saved/>}/>
+     {/* <Route exact path="/make" component={MakeMeal}/> */}
+     <Route exact path="/edit" element={<EditComida/>}/>
+     <Route exact path="/saved:id" element={<Comida/>}/>
+    <Route exact path="/all" element={<AllMeals/>}/>
      
   
 
 
       {/* <Route exact path="/edit" component={EditTechnique}/> */}
-      </Switch>
+      </Routes>
    </Router>
   
 

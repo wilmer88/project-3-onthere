@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-class Search extends Component {
-    render() {
-        return (
-            <div>
-                <>
+// class Search extends Component {
+//     render() {
+//         return (
+//             <div>
+//                 <>
                 
                
 
@@ -13,10 +13,10 @@ class Search extends Component {
                     
 
            
-                    </>
-            </div>
-        );
-    }
-}
+//                     </>
+//             </div>
+//         );
+//     }
+// }
 
-export default Search;
+// export default Search;
