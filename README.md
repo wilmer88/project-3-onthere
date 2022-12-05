@@ -5,7 +5,7 @@ Major bugs are api headers need to be wraped in a function to limit to one objec
 
   ##Technologys used for this project 
   
-linux
+ linux
  react js
  node js
  bootstrap
